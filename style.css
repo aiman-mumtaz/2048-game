@@ -1,0 +1,36 @@
+body{
+    background: #304352;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #d7d2cc, #304352);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #d7d2cc, #304352); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 450px;
+    height: 450px;
+    background-color: rgb(197, 197, 197);
+    border: solid rgb(77,77,77);
+}
+
+#grid div {
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 700;
+    color: darkslategray;
+}
+
+.jumbotron {
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.text {
+    font-size: 30px;
+    text-align: center;
+    color: darkslategray;
+    font-weight: 600;
+}
