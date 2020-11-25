@@ -3,14 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreDisplay = document.querySelector('#score')
     const resultDisplay = document.querySelector('#result')
     const refresh = document.querySelector('#refresh')
+    const highScoreDisplay = document.querySelector('#highscore')
     const width = 4
     let squares = []
     let score = 0
+    let highScore = 0
 
     refresh.addEventListener('click',function() {
         clearBoard()
-        scoreDisplay.innerHTML = 0
         resultDisplay.innerHTML = 'Result'
+        highScoreDisplay.innerHTML = highScore
+        score = 0
+        scoreDisplay.innerHTML = 0
     })    
 
     function clearBoard(){
@@ -158,6 +162,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 squares[i+1].innerHTML = 0
                 score += combinedTotal
                 scoreDisplay.innerHTML = score
+                if(score > highScore){
+                    highScore = score
+                }
+                highScoreDisplay.innerHTML = highScore
             }
         }
         checkForWin()
@@ -171,6 +179,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 squares[i+width].innerHTML = 0
                 score += combinedTotal
                 scoreDisplay.innerHTML = score
+                if(score > highScore){
+                    highScore = score
+                }
+                highScoreDisplay.innerHTML = highScore
             }
         }
         checkForWin()
